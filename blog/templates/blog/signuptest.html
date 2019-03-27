@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+{% block content %}
+  
+  <h1>Sign Up</h1>
+
+  <form class="site-form" action="/signup/" method="POST">
+  {% csrf_token %}
+    {{ form }}
+    <br><label>Email:</label><input type="email" name="email">
+    <label>Phone:</label><input type="text" name="phone">
+    <br><input type="submit" name="submit" value="signup">
+    
+  </form>
+ 
+{% endblock content %}  
